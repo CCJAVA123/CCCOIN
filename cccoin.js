@@ -114,7 +114,7 @@ class chain {
         )
         this.transactionPool.push(minerRewardTransaction)
         const newBlock=new block(this.transactionPool,this.getlastblock().hash)
-        newBlock.wakuang(this.difficult)//自己添加实参
+        newBlock.wakuang(this.difficult)
         this.chain.push(newBlock)
         this.transactionPool=[]
     }
@@ -144,11 +144,6 @@ class chain {
         }
     }
 }
-
-console.log('本程序由CC爸爸一人编写，参考中本聪の论文，用CCcoin，享受钱被偷的快感！！')
-console.log('没有中本聪就没有CCcoin！！！！！！！！！！！')
-console.log(sha256('本程序由CC爸爸一人编写，参考中本聪の论文，用CCcoin，享受钱被偷的快感！！'
-    +'没有中本聪就没有CCcoin！！！！！！！！！！！').toString())
 const schain=new chain()
 const ps=ec.genKeyPair()
 const pr=ec.genKeyPair()
